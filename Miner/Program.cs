@@ -70,21 +70,19 @@ namespace IngameScript {
                 }
 
                 if (battery != null) {
-                    lcd.WriteText("\nBattery: " + Math.Round((battery.CurrentStoredPower / battery.MaxStoredPower) * 1000) / 10.0 + "%", true);
+                    lcd.WriteText("\nBattery: " + Math.Round(battery.CurrentStoredPower / battery.MaxStoredPower, 2) + "%", true);
                 }
 
                 if (solarPanel != null) {
-                    lcd.WriteText("\nSolar Panel Output: " + solarPanel.CurrentOutput + " mW", true);
+                    lcd.WriteText("\nSolar Panel Output: " + Math.Round(solarPanel.CurrentOutput * 1000, 2) + " kW", true);
 
                     if (solarPanel.MaxOutput > 0) { 
-                        lcd.WriteText(" (" + Math.Round((solarPanel.CurrentOutput / solarPanel.MaxOutput) * 1000) / 10.0 + "% of max)", true);
+                        lcd.WriteText(" (" + Math.Round(solarPanel.CurrentOutput / solarPanel.MaxOutput * 100, 2) + "% of max)", true);
                     } else {
                         lcd.WriteText(" (100%, nighttime)", true);
                     }
                 }
             }
-            
-            
         }
     }
 }
