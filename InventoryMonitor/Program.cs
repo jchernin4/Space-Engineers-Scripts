@@ -22,6 +22,7 @@ namespace IngameScript {
 	partial class Program : MyGridProgram {
 
 		public Program() {
+			Runtime.UpdateFrequency = UpdateFrequency.Update10; // Update every 10th tick
 		}
 
 		public void Main(string argument, UpdateType updateSource) {

@@ -42,6 +42,7 @@ namespace IngameScript {
         // to learn more about ingame scripts.
 
         public Program() {
+            Runtime.UpdateFrequency = UpdateFrequency.Update1; // Update every tick
         }
 
         public void Main(string argument, UpdateType updateSource) {
@@ -82,6 +83,8 @@ namespace IngameScript {
                     }
                 }
             }
+            
+            
         }
     }
 }
