@@ -58,7 +58,7 @@ namespace IngameScript {
 			if (lcd != null) {
 				lcd.WriteText("");
 				foreach (MyItemType type in totalBlocks.Keys) {
-					lcd.WriteText("\n" + type + " - " + totalBlocks[type], true);
+					lcd.WriteText(type.SubtypeId + " - " + totalBlocks[type] + "\n", true);
 				}
 			}
 		}
