@@ -38,8 +38,8 @@ namespace IngameScript {
 				for (int i = 0; i < block.InventoryCount; i++) {
 					IMyInventory curInv = block.GetInventory(i);
 
-					for (int j = 0; j < curInv.Itemcount; j++) {
-						IMyInventoryItem item = curInv.GetItemAt(j);
+					for (int j = 0; j < curInv.ItemCount; j++) {
+						MyInventoryItem item = curInv.GetItemAt(j).Value;
 						
 						if (!totalBlocks.ContainsKey(item.Type)) {
 							totalBlocks.Add(item.Type, item.Amount);
@@ -55,8 +55,8 @@ namespace IngameScript {
 			GridTerminalSystem.GetBlocksOfType<IMyTextPanel>(blocks);
 			IMyTextPanel lcd = blocks[0] as IMyTextPanel;
 
-			lcd.WriteText("");
 			if (lcd != null) {
+				lcd.WriteText("");
 				foreach (MyItemType type in totalBlocks.Keys) {
 					lcd.WriteText("\n" + type + " - " + totalBlocks[type], true);
 				}
