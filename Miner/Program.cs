@@ -70,7 +70,7 @@ namespace IngameScript {
                 }
 
                 if (battery != null) {
-                    lcd.WriteText("\nBattery: " + Math.Round(battery.CurrentStoredPower / battery.MaxStoredPower, 2) + "%", true);
+                    lcd.WriteText("\nBattery: " + Math.Round(battery.CurrentStoredPower / battery.MaxStoredPower * 100, 2) + "%", true);
                 }
 
                 if (solarPanel != null) {
