@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseStats", "BaseStats.csproj", "{7622D7E5-DD86-4264-91E1-54FEEA9E7F25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7622D7E5-DD86-4264-91E1-54FEEA9E7F25}.Debug|x64.ActiveCfg = Debug|x64
+		{7622D7E5-DD86-4264-91E1-54FEEA9E7F25}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {986EDE61-1D10-42FC-B90B-C8DA224351B3}
+	EndGlobalSection
+EndGlobal
